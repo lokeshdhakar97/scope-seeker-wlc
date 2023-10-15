@@ -1,0 +1,126 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Gabarito", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(33, 32, 32);
+  padding: 30px 50px;
+}
+main{
+    min-height: 100%;
+    padding-bottom: 30px;
+}
+#hero-sec {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  padding: 0px 20px;
+  align-items: center;
+}
+#cntn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#cntn h1 {
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 20px;
+}
+#cntn h1 span {
+  color: #0078ff;
+  font-family: 'Rancho', cursive;
+}
+#cntn p {
+  margin-top: 10px;
+  color: rgba(240, 248, 255, 0.728);
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0px 50px 0px 50px;
+}
+
+#launch-date {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  min-height: 150px;
+  background: rgb(23, 23, 23);
+  border-radius: 50px 0px 50px 0px;
+  gap: 30px;
+  margin-top: 30px;
+  color: white;
+}
+
+#launch-date #ld-left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+#launch-date h2 {
+  /* color: #0078ff; */
+  font-weight: 400;
+  
+  font-family: 'Rancho', cursive;
+}
+.btn {
+  padding: 15px 25px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+.btn:nth-child(1) {
+  background-color: rgb(8, 118, 30);
+  color: white;
+}
+
+#launch-date #ld-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+#countdown {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  #hero-sec {
+    flex-direction: column;
+    gap: 50px;
+  }
+  html,body{
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 550px) {
+    #launch-date {
+        flex-direction: column;
+        gap: 20px;
+    }
+    #launch-date #ld-left {
+        width: 100%;
+    }
+    #launch-date #ld-right {
+        width: 100%;
+    }
+}

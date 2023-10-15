@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rancho&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div id="hero-sec">
+        <div id="cntn">
+          <h1>Get Ready for an Epic Journey with <span> <br>  Scope Seeker</span></h1>
+          <p>
+            Hello, tech enthusiasts and job seekers! We're thrilled to announce
+            the much-anticipated launch of Scope Seeker, your future hub for
+            tech job opportunities. <br />
+            <br />
+            Join our waiting list now, and be at the forefront of the tech job
+            revolution. Whether you're a coding ninja, a design wizard, or a
+            tech-savvy innovator, Scope Seeker is your ultimate launchpad to
+            tech success.
+            <br /><br />
+            Stay tuned for exciting updates, early-access privileges, and a
+            toolbox filled with resources crafted for tech professionals like
+            you. The tech industry is ever-evolving, and we can't wait to have
+            you on board. So, mark your calendar for January 1, 2024, and secure
+            your spot on our waiting list today. Your next tech adventure begins
+            here!
+          </p>
+        </div>
+        <img src="./cal.png" alt="img" />
+      </div>
+      <div id="launch-date">
+        <div id="ld-left">
+          <h2>Launch Countdown</h2>
+          <button id="countdown" class="btn"></button>
+        </div>
+        <div id="ld-right">
+          <h2>Join Waiting List</h2>
+          <a href="https://chat.whatsapp.com/DsLpR7cUU1RL2AfDCyrDpK">
+            <button class="btn">Join Whatsapp Community for Updates</button>
+          </a>
+        </div>
+      </div>
+    </main>
+    <script>
+      // Set the target date (January 1, 2024)
+      const targetDate = new Date("2024-01-01T00:00:00").getTime();
+
+      // Update the countdown every second
+      const countdown = setInterval(function () {
+        const now = new Date().getTime();
+        const timeRemaining = targetDate - now;
+
+        if (timeRemaining <= 0) {
+          clearInterval(countdown);
+          document.getElementById("countdown").innerHTML = "Launch Today!";
+        } else {
+          const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+          document.getElementById("countdown").innerHTML =
+            days +
+            " days " +
+            hours +
+            " hours " +
+            minutes +
+            " minutes " +
+            seconds +
+            " seconds";
+        }
+      }, 1000); // Update every second
+    </script>
+  </body>
+</html>
